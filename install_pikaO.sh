@@ -15,9 +15,9 @@ groupadd -g 6999 pika ;
 useradd -u 6999 -g 6999 pika ;
 
 if [ "$VERSION" -eq "7" ] ; then
-    curl https://raw.githubusercontent.com/mountainmonkey/pikaO/master/pikaO7.sh -O /home/pika/pikaO.sh
+    curl https://raw.githubusercontent.com/mountainmonkey/pikaO/master/pikaO7.sh > /home/pika/pikaO.sh
 elif [ "$VERSION" -eq "6" ] ; then
-    curl https://raw.githubusercontent.com/mountainmonkey/pikaO/master/pikaO6.sh -O /home/pika/pikaO.sh
+    curl https://raw.githubusercontent.com/mountainmonkey/pikaO/master/pikaO6.sh > /home/pika/pikaO.sh
 fi
 
 chmod 700 /home/pika/pikaO.sh
