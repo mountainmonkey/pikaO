@@ -11,6 +11,8 @@ else
     exit 9;
 fi
 
+yum install -y mailx
+
 groupadd -g 6999 pika ;
 useradd -u 6999 -g 6999 pika ;
 
@@ -37,4 +39,4 @@ chown pika: /var/spool/cron/pika
 
 su pika -c "/home/pika/pikaO.sh -v"
 su pika -c "crontab -l"
-echo "pikaO is installed! remember to edit /home/pika/pika.sh to change the email address and calling threshold as you like!";
+echo "pikaO is installed! remember to edit /home/pika/pikaO.sh to change the email address and calling threshold as you like!";
